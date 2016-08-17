@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <GridView
+        android:id="@+id/grvPictures"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="3"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:verticalSpacing="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvHelp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_help" />
+
+        <TextView
+            android:id="@+id/tvRemote"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/tvHelp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/ic_remote" />
+
+        <GridView
+            android:id="@+id/grvOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tvHelp"
+            android:horizontalSpacing="3dp"
+            android:numColumns="7"
+            android:verticalSpacing="3dp" />
+
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/grvInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:horizontalSpacing="3dp"
+        android:numColumns="7"
+        android:verticalSpacing="3dp" />
+
+
+</LinearLayout>
